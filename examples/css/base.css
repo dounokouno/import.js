@@ -1,0 +1,321 @@
+@charset "UTF-8";
+
+/* base
+------------------------------------------------------------- */
+html {
+	background-color: #333;
+}
+
+body {
+	border-top: 6px solid #333;
+	color: #333;
+	background-color: #fff;
+}
+
+.container {
+	display: block;
+	width: 950px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+/* font */
+body {
+	line-height: 1.6;
+	font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/* for IE6-Win */
+*html body {
+	font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/* for IE7-Win */
+*:first-child+html body {
+	font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-size: small;
+}
+
+/* for IE8-Win */
+head~/* */body {
+	font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-size: small;
+}
+
+/* for Modern Browser */
+body:last-child {
+	font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-size: 13px;
+}
+
+/* anchor */
+a:link {
+	color: #00e;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #551a8b;
+	text-decoration: underline;
+}
+
+a:focus
+,a:hover
+,a:active {
+	text-decoration: none;
+}
+
+/* text */
+strong {
+	font-weight: bold;
+}
+
+em {
+	color: #f00;
+}
+
+.center {
+	text-align: center;
+}
+
+/* image */
+img {
+	vertical-align: bottom;
+}
+
+
+
+/* header
+------------------------------------------------------------- */
+#header
+,header {
+	display: block;
+	padding-top: 2em;
+}
+
+#header h1
+,header h1 {
+	margin-bottom: 1em;
+	border-bottom: 3px solid #333;
+	font-size: 146.5%;
+	font-weight: bold;
+}
+
+
+
+/* nav
+------------------------------------------------------------- */
+#nav {
+	margin-bottom: 3em;
+}
+
+#nav dl {}
+#nav dl dt {
+	margin-bottom: 1em;
+	padding-left: 3px;
+	border-left: 3px solid #333;
+	font-size: 116%;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+#nav dl dd {}
+#nav dl dd ul {}
+#nav dl dd ul li {
+	list-style: disc;
+	margin-left: 20px;
+}
+
+
+
+/* footer
+------------------------------------------------------------- */
+#footer
+,footer {
+  display: block;
+	padding: 1em 0 2em 0;
+	background-color: #333;
+}
+
+#footer address
+,footer .copyright {
+	color: #fff;
+	text-align: center;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#footer address a:link
+,#footer address a:visited
+,footer .copyright a:link
+,footer .copyright a:visited {
+	color: #fff;
+}
+
+
+
+/* content
+------------------------------------------------------------- */
+#content {
+	background-color: #fff;
+}
+
+
+
+/* layout
+------------------------------------------------------------- */
+#nav .section
+,#content .section
+,section {
+	display: block;
+	margin-bottom: 3em;
+}
+
+#content .section .section {
+	margin-bottom: 2em;
+}
+
+/* heading */
+#content h2 {
+	margin-bottom: 1em;
+	padding-left: 6px;
+	border-bottom: 1px solid #333;
+	border-left: 6px solid #333;
+	font-size: 116%;
+	font-weight: bold;
+}
+
+#content h3 {
+	margin-bottom: 1em;
+	padding-left: 5px;
+	border-left: 3px solid #333;
+	font-size: 116%;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+#content h4 {
+	margin-bottom: 1em;
+	font-size: 116%;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+/* paragraph */
+#content p {
+	margin-bottom: 1em;
+}
+
+/* list */
+#content ul {
+	margin-bottom: 1em;
+}
+
+#content ul li {
+	list-style: disc;
+	margin-left: 20px;
+}
+
+#content ol {
+	margin-bottom: 1em;
+}
+
+#content ol li {
+	list-style: decimal;
+	margin-left: 25px;
+}
+
+#content dl {
+	margin-bottom: 1em;
+}
+
+/* table */
+#content table {
+	margin-bottom: 1em;
+}
+
+/* cols 1-1 */
+#content .wrap1-1 {
+	margin-bottom: 1em;
+}
+
+#content .wrap1-1 .col {}
+
+/* cols 2-1 */
+#content .wrap2-1 {
+	margin-bottom: 1em;
+}
+
+#content .wrap2-1 .main-col {}
+
+#content .wrap2-1 .sub-col {}
+
+/* cols 1-2 */
+#content .wrap1-2 {
+	margin-bottom: 1em;
+}
+
+#content .wrap2-1 .main-col {}
+
+#content .wrap2-1 .sub-col {}
+
+/* cols 1-1-1 */
+#content .wrap1-1-1 {
+	margin-bottom: 1em;
+}
+
+#content .wrap1-1-1 .col {}
+
+/* other */
+#content pre {
+	margin-bottom: 1.5em;
+	padding: 12px;
+	border: 1px solid #999;
+	background-color: #ddd;
+}
+
+#content .pagetop {
+	text-align: right;
+}
+
+#content .ad {
+	margin-bottom: 3em;
+	text-align: center;
+}
+
+#content #message {
+	padding: 12px;
+	border: 2px dashed #999;
+}
+
+#content #message p {
+	margin-bottom: 0;
+}
+
+
+/* font size
+-------------------------------------------------------------
+
+	10px = 77%
+	11px = 85%
+	12px = 93%
+	
+	13px = 100% (default)
+	
+	14px = 108%
+	15px = 116%
+	16px = 123.1%
+	17px = 131%
+	18px = 138.5%
+	19px = 146.5%
+	20px = 153.9%
+	21px = 161.6%
+	22px = 167%
+	23px = 174%
+	24px = 182%
+	25px = 189%
+	26px = 197%
+
+
+
+/* end
+------------------------------------------------------------- */

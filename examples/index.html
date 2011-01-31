@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>import.js - Importing JavaScript files.</title>
+<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/import.js"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>import.js - Importing JavaScript files.</h1>
+  </div>
+</header>
+<div id="content">
+  <div class="container">
+    <section>
+      <h2>About</h2>
+      <p>It is JavaScript to import JavaScript files.<br>
+       When a pass of import.js is right, that's imported according to the hierarchy.</p>
+    </section>
+    <section>
+      <h2>Import test</h2>
+      <ul id="message"></ul>
+    </section>
+    <section>
+      <h2>Import test on lower page</h2>
+      <ul>
+        <li><a href="index.html">top page</a></li>
+        <li><a href="2nd/index.html">2nd page</a></li>
+        <li><a href="2nd/3rd/index.html">3rd page</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Download</h2>
+      <p><a href="https://github.com/dounokouno/import.js">dounokouno/import.js - GitHub</a></p>
+    </section>
+    <section>
+      <h2>Usage</h2>
+      <h3>File composition</h3>
+      <pre><code>index.html
+2nd/
+  + index.html
+  + 3rd/
+    + index.html
+js/
+  + jquery.js
+  + import.js
+  + external-1.js
+  + external-1.js</code></pre>
+      <h3>HTML</h3>
+      <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;js/import.js&quot;&gt;&lt;/script&gt;</code></pre>
+      <h3>2nd page HTML</h3>
+      <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;../js/import.js&quot;&gt;&lt;/script&gt;</code></pre>
+      <h3>3nd page HTML</h3>
+      <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;../../js/import.js&quot;&gt;&lt;/script&gt;</code></pre>
+      <h3>JavaScript</h3>
+      <pre><code>var require = function(jsfile) {
+  var ary = document.getElementsByTagName(&#039;script&#039;);
+  for (var i=0;i&lt;ary.length;i++) {
+    if (ary[i].getAttribute(&#039;src&#039;).match(/import\.js$/)) {
+      var jspath = ary[i].getAttribute(&#039;src&#039;).match(/.+\//);
+    }
+  }
+  var elem = document.createElement(&#039;script&#039;);
+  elem.setAttribute(&#039;type&#039;, &#039;text/javascript&#039;);
+  elem.setAttribute(&#039;src&#039;, jspath+jsfile);
+  document.getElementsByTagName(&#039;head&#039;)[0].appendChild(elem);
+}
+
+// Add the following
+require('external-1.js');
+require('external-2.js');</code></pre>
+    </section>
+    <section>
+      <h2>Lisence</h2>
+      <p>Dual licensed under the MIT or GPL Version 2 licenses.</p>
+    </section>
+    <section>
+      <h2>History</h2>
+      <ul>
+        <li>2011-01-31 : Opening to the public.</li>
+      </ul>
+    </section>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <p class="copyright">Copyright &copy; <a href="http://dounokouno.com/">dounokouno</a> All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
